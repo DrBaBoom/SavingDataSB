@@ -9,14 +9,13 @@ import UIKit
 
 class TableViewController: UITableViewController, Fantom {
     
-
+    @IBOutlet var tableViewM2: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        
+        tableViewM2.delegate = self
+        tableViewM2.dataSource = self
          self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 

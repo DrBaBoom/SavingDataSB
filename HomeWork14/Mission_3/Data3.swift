@@ -42,8 +42,7 @@ class Data3 {
     
     static func remove(at i: Int) {
         
-        guard let appDelegate =
-          UIApplication.shared.delegate as? AppDelegate else {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
@@ -51,8 +50,9 @@ class Data3 {
         
         let object = listOfNotes[i]
         managedContext.delete(object)
+        try! managedContext.save()
+        listOfNotes.remove(at: i)
     }
-    
     
     
     static func append(_ x: String) {

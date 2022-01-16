@@ -94,10 +94,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="D5R-GT-bmB" id="L4v-2U-hOk"/>
-                            <outlet property="delegate" destination="D5R-GT-bmB" id="USz-lC-2Xh"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ych-fB-iBB">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9vh-nA-5gu">
@@ -106,6 +102,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewM2" destination="N8x-PH-ZcM" id="Ea9-x3-gaL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cs2-T5-y2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,36 +119,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="QNG-CO-6VG" customClass="MyCell3">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="53"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="B68-SL-LXi" customClass="MyCell3" customModule="HomeWork14" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QNG-CO-6VG" id="vT4-3O-Sdf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B68-SL-LXi" id="WlI-xj-Mek">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnN-DI-xqy">
-                                            <rect key="frame" x="40" y="16" width="334" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tay-GX-kZn">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="bnN-DI-xqy" firstAttribute="top" secondItem="vT4-3O-Sdf" secondAttribute="topMargin" constant="5" id="70i-he-BlW"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="bnN-DI-xqy" secondAttribute="trailing" constant="20" id="88m-Mi-Un1"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="bnN-DI-xqy" secondAttribute="bottom" constant="5" id="BDJ-e6-LOo"/>
-                                        <constraint firstItem="bnN-DI-xqy" firstAttribute="leading" secondItem="vT4-3O-Sdf" secondAttribute="leadingMargin" constant="20" id="yON-Yn-OLZ"/>
+                                        <constraint firstItem="Tay-GX-kZn" firstAttribute="top" secondItem="WlI-xj-Mek" secondAttribute="top" id="PVG-fs-39R"/>
+                                        <constraint firstItem="Tay-GX-kZn" firstAttribute="leading" secondItem="WlI-xj-Mek" secondAttribute="leading" constant="20" id="paR-6P-Nv8"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tay-GX-kZn" secondAttribute="trailing" constant="20" id="sdO-MC-42c"/>
+                                        <constraint firstAttribute="bottom" secondItem="Tay-GX-kZn" secondAttribute="bottom" id="vOf-v9-MAi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="lblWhatToDo" destination="bnN-DI-xqy" id="4pp-Ly-N5B"/>
+                                    <outlet property="lblWhatToDo" destination="Tay-GX-kZn" id="avA-49-fMh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="MTY-b9-aET" id="3au-ps-qhw"/>
-                            <outlet property="delegate" destination="MTY-b9-aET" id="XL4-di-qDX"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="AK7-p6-yLA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RSq-4x-uhl">
@@ -158,6 +153,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewM3" destination="L0d-EI-G1q" id="7qd-yt-QYZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9U-zN-LhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

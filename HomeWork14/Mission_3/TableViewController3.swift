@@ -7,8 +7,11 @@
 
 import UIKit
 
-class TableViewController3: UITableViewController, Fantom {
+class TableViewController3:
+    UITableViewController, Fantom {
     
+    
+    @IBOutlet var tableViewM3: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
@@ -20,6 +23,8 @@ class TableViewController3: UITableViewController, Fantom {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableViewM3.delegate = self
+        tableViewM3.dataSource = self
          self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 

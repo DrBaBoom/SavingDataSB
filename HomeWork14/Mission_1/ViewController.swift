@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtSecondName: UITextField!
     
